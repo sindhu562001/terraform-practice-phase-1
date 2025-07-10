@@ -1,6 +1,6 @@
 provider "google" {
-  project     = "red-delight-463218-c6"
-  region      = "us-central1"
+  project = "red-delight-463218-c6"
+  region  = "us-central1"
 }
 
 module "vpc" {
