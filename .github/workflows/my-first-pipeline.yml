@@ -37,13 +37,13 @@ jobs:
           GOOGLE_APPLICATION_CREDENTIALS: $HOME/secret-key.json
 
       - name: Terraform Plan
-        run: terraform plan -var-file=terraform-dev.tfvars
+        run: terraform plan
         working-directory: vpc_usage
         env:
           GOOGLE_APPLICATION_CREDENTIALS: $HOME/secret-key.json
 
       - name: "Terraform Apply (CAUTION: Will Create Resources)"
-        run: terraform apply -auto-approve -var-file=terraform-dev.tfvars
+        run: terraform apply -auto-approve
         working-directory: vpc_usage
         env:
           GOOGLE_APPLICATION_CREDENTIALS: $HOME/secret-key.json
