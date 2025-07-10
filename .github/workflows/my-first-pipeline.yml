@@ -10,20 +10,29 @@ jobs:
         name: Terraform workflow
         runs-on: ubuntu-latest
         steps:
+            - name: Change directory to vpc_usage
+              working-directory: vpc_usage
+              run: echo "Switched to vpc_usage folder"
+
             - name: Checkout repository
               uses: actions/checkout@v4
+              
 
             - name: Setup terraform
               uses: hashicorp/setup-terraform@v3
 
             - name: Terraform Format Check
               run: terraform fmt -check -recursive
+              working-directory: vpc_usage
 
             - name: Terraform Init
               run: terraform init
+              working-directory: vpc_usage
 
             - name: Terraform Validate
               run: terraform validate
+              working-directory: vpc_usage
 
             - name: Terraform Plan
               run: terraform plan
+              working-directory: vpc_usage
