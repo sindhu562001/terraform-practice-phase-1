@@ -4,7 +4,7 @@ provider "google" {
 }
 
 module "vpc" {
-  source       = "F:/terraform-lab/modules/vpc"
+  source       = "../modules/vpc"
   network_name = "my-vpc"
 
   subnets = {
