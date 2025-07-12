@@ -1,7 +1,7 @@
 provider "google" {
   project     = "red-delight-463218-c6"
   region      = "us-central1"
-  credentials = file("$HOME/secret-key.json")
+#  credentials = file("$HOME/secret-key.json")
 }
 
 module "vpc" {
