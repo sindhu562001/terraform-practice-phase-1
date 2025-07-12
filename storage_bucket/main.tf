@@ -1,7 +1,6 @@
 provider "google" {
   project     = "red-delight-463218-c6"
   region      = "us-central1"
-  credentials = file("F:/terraform-lab/service-key.json")
 }
 
 module "state_storage_bucket" {

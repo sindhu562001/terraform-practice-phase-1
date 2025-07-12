@@ -9,6 +9,8 @@ jobs:
   terraform:
     name: Terraform Workflow
     runs-on: ubuntu-latest
+    env:
+      GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
 
     steps:
       - name: Checkout repository
